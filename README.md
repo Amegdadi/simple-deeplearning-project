@@ -20,9 +20,9 @@ predictors_norm = (predictors - predictors.mean()) / predictors.std()
 predictors_norm.head()
 
 # deep learning via keras 
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
+import keras\n
+from keras.models import Sequential\n
+from keras.layers import Dense\n
 
 # define regression model
 def regression_model():

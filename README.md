@@ -7,11 +7,15 @@ import numpy as np
 
 # import Data
 concrete_data = pd.read_csv('https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/DL0101EN/labs/data/concrete_data.csv')
+
 concrete_data.head()
 
 concrete_data_columns = concrete_data.columns
+
 predictors = concrete_data[concrete_data_columns[concrete_data_columns != 'Strength']] # all columns except Strength
 target = concrete_data['Strength'] # Strength column
+
+
 predictors_norm = (predictors - predictors.mean()) / predictors.std()
 predictors_norm.head()
 
